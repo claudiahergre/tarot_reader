@@ -12,12 +12,12 @@ export class CartasService {
   private baseUrl: string
 
   constructor() {
-    this.baseUrl = 'https://tarotapi.fly.dev/api/v1'
+    this.baseUrl = ''
   }
 
   getAll(): Promise<Carta[]> {
     return firstValueFrom(
-      this.httpClient.get<Carta[]>(`${this.baseUrl}/major`)
+      this.httpClient.get<Carta[]>(`${this.baseUrl}`)
     )
   }
 }

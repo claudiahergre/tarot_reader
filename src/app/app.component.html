@@ -8,9 +8,9 @@
         Tiradas
       </button>
       <ul class="dropdown-menu">
-        <li><button class="dropdown-item" type="button">Consejo del dia</button></li>
-        <li><button class="dropdown-item" type="button">Si o no</button></li>
-        <li><button class="dropdown-item" type="button">Soy lo mas</button></li>
+        <li routerLink="['/consejo']"><button class="dropdown-item" type="button">Consejo del dia</button></li>
+        <li routerLink="['/si_o_no']"><button class="dropdown-item" type="button">Si o no</button></li>
+        <li routerLink="['/autoestima']"><button class="dropdown-item" type="button">Soy lo mas</button></li>
       </ul>
     </div>
   </nav>
@@ -18,7 +18,6 @@
 
 <main>
   <router-outlet></router-outlet>
-  <app-consejo></app-consejo>
 </main>
 
 <footer>

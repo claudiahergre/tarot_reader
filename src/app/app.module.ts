@@ -4,11 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConsejoComponent } from './pages/consejo/consejo.component';
+import { SiONoComponent } from './pages/si-o-no/si-o-no.component';
+import { AutoestimaComponent } from './pages/autoestima/autoestima.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConsejoComponent
+    ConsejoComponent,
+    SiONoComponent,
+    AutoestimaComponent
   ],
   imports: [
     BrowserModule,
