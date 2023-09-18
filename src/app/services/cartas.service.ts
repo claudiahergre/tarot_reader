@@ -8,16 +8,16 @@ import { firstValueFrom } from 'rxjs';
 })
 export class CartasService {
 
-  private httpClient = inject(HttpClient)
-  private baseUrl: string
+  private httpClient = inject(HttpClient);
+  private baseUrl: string;
 
   constructor() {
-    this.baseUrl = ''
+    this.baseUrl = 'http://localhost:3000/api/cartas';
   }
 
   getAll(): Promise<Carta[]> {
     return firstValueFrom(
-      this.httpClient.get<Carta[]>(`${this.baseUrl}`)
-    )
+      this.httpClient.get<Carta[]>(this.baseUrl)
+    );
   }
 }

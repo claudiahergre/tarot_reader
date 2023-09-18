@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ConsejoComponent } from './pages/consejo/consejo.component';
 import { SiONoComponent } from './pages/si-o-no/si-o-no.component';
 import { AutoestimaComponent } from './pages/autoestima/autoestima.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AutoestimaComponent } from './pages/autoestima/autoestima.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

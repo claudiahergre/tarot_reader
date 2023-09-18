@@ -11,3 +11,7 @@
 - /consejo 
 - /si_o_no
 - /autoestima
+
+## Promesas
+- getAll devuelve un array de objetos
+- getById devuelve un objeto
