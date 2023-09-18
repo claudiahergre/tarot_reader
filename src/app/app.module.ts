@@ -7,13 +7,15 @@ import { ConsejoComponent } from './pages/consejo/consejo.component';
 import { SiONoComponent } from './pages/si-o-no/si-o-no.component';
 import { AutoestimaComponent } from './pages/autoestima/autoestima.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConsejoComponent,
     SiONoComponent,
-    AutoestimaComponent
+    AutoestimaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
