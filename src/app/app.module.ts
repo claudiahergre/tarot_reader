@@ -9,6 +9,7 @@ import { AutoestimaComponent } from './pages/autoestima/autoestima.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'animate.css';
+
+body {
+    background-image: url(https://img.freepik.com/premium-photo/pink-smoke-black-background-colorful-fog-abstract-swirl-vaping-seamless-pattern_379823-3113.jpg?w=826);
+    background-size: cover;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
