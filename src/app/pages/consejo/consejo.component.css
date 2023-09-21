@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 .cartas {
     margin-top: 20%;
     display: flex;
@@ -6,179 +11,154 @@
     position: relative;
 }
 
+img {
+    display: block;
+}
+
 .carta {
-    max-width: 100%;
-    width: 200px;
-    height: 360px;
-    border-radius: 20px;
-    position: relative;
-
-}
-
-.carta div {
-    position: absolute;
-    max-width: 100%;
-    width: 200px;
-    height: 360px;
-    border-radius: 20px;
-    backface-visibility: hidden;
-    transition: 2s;
-}
-
-.carta .front {
     background-image: url(https://img.freepik.com/vector-gratis/fondo-pantalla-mistico-dibujado-mano_23-2149459343.jpg?w=360&t=st=1694264117~exp=1694264717~hmac=707048db6cd45ed26f54c696169d1eaf9a975464956853cee7f92f105283cb72);
     background-size: cover;
-    transform: perspective(500px) rotateY(0deg);
+    max-width: 100%;
+    width: 200px;
+    height: 360px;
+    border-radius: 20px;
+    transition: 0.6s;
 }
 
-.carta:hover .front {
-    transform: perspective(500px) rotateY(180deg)translateY(450px) translateX(-50%);
+.carta:hover {
+    transform: translateY(-83px);
 }
-
-.carta .back {
-    background-image: url(https://img.freepik.com/premium-vector/page-pentacles-tarot-card-minor-arcana-with-black-gold-white-hand-drawn-vector-doodle_351449-95.jpg);
-    background-size: cover;
-    transform: perspective(500px) rotateY(180deg);
-
-}
-
-.carta:hover .back {
-    transform: perspective(500px) rotateY(360deg) translateY(450px) translateX(-50%);
-
-}
-
-
 
 .carta:nth-child(1) {
-    z-index: 21;
+    z-index: 1;
     position: absolute;
     left: 0%;
 
 }
 
 .carta:nth-child(2) {
-    z-index: 20;
+    z-index: 2;
     position: absolute;
-    left: 5%;
+    left: 4%;
 
 }
 
 .carta:nth-child(3) {
-    z-index: 19;
+    z-index: 3;
     position: absolute;
-    left: 10%;
+    left: 8%;
 }
 
 .carta:nth-child(4) {
-    z-index: 18;
+    z-index: 4;
     position: absolute;
-    left: 15%;
+    left: 12%;
 }
 
 .carta:nth-child(5) {
-    z-index: 17;
+    z-index: 5;
+    position: absolute;
+    left: 16%;
+}
+
+.carta:nth-child(6) {
+    z-index: 6;
     position: absolute;
     left: 20%;
 }
 
-.carta:nth-child(6) {
-    z-index: 16;
-    position: absolute;
-    left: 25%;
-}
-
 .carta:nth-child(7) {
-    z-index: 15;
+    z-index: 7;
     position: absolute;
-    left: 30%;
+    left: 24%;
 }
 
 .carta:nth-child(8) {
-    z-index: 14;
+    z-index: 8;
     position: absolute;
-    left: 35%;
+    left: 28%;
 }
 
 .carta:nth-child(9) {
-    z-index: 13;
+    z-index: 9;
     position: absolute;
-    left: 40%;
+    left: 32%;
 }
 
 .carta:nth-child(10) {
-    z-index: 12;
+    z-index: 10;
     position: absolute;
-    left: 45%;
+    left: 36%;
 }
 
 .carta:nth-child(11) {
     z-index: 11;
     position: absolute;
-    left: 50%;
+    left: 40%;
 }
 
 .carta:nth-child(12) {
-    z-index: 10;
+    z-index: 12;
     position: absolute;
-    left: 55%;
+    left: 44%;
 }
 
 .carta:nth-child(13) {
-    z-index: 9;
+    z-index: 13;
+    position: absolute;
+    left: 48%;
+}
+
+.carta:nth-child(14) {
+    z-index: 14;
+    position: absolute;
+    left: 52%;
+}
+
+.carta:nth-child(15) {
+    z-index: 15;
+    position: absolute;
+    left: 56%;
+}
+
+.carta:nth-child(16) {
+    z-index: 16;
     position: absolute;
     left: 60%;
 }
 
-.carta:nth-child(14) {
-    z-index: 8;
-    position: absolute;
-    left: 65%;
-}
-
-.carta:nth-child(15) {
-    z-index: 7;
-    position: absolute;
-    left: 70%;
-    ;
-}
-
-.carta:nth-child(16) {
-    z-index: 6;
-    position: absolute;
-    left: 75%;
-}
-
 .carta:nth-child(17) {
-    z-index: 5;
+    z-index: 17;
     position: absolute;
-    left: 80;
+    left: 64%;
 }
 
 .carta:nth-child(18) {
-    z-index: 4;
+    z-index: 18;
     position: absolute;
-    left: 85;
+    left: 68%;
 }
 
 .carta:nth-child(19) {
-    z-index: 3;
+    z-index: 19;
     position: absolute;
-    left: 90;
+    left: 72%;
 }
 
 .carta:nth-child(20) {
-    z-index: 2;
+    z-index: 20;
     position: absolute;
-    left: 95;
+    left: 76%;
 }
 
 .carta:nth-child(21) {
-    z-index: 1;
+    z-index: 21;
     position: absolute;
-    left: 100;
+    left: 80%;
 }
 
-.active:hover {
-    transform: rotateY(180deg);
-
+.carta:nth-child(22) {
+    z-index: 22;
+    position: absolute;
+    left: 84%;
 }
