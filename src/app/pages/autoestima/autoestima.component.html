@@ -1,6 +1,25 @@
 <div class="container">
     <div class="cartas">
-        <div class="carta" *ngFor="let carta of cartas">
+        <div class="carta" *ngFor="let carta of cartas" (click)="mostrarDetalles(carta)">
         </div>
     </div>
+</div>
+
+<div class="container" *ngIf="cartasSeleccionadas">
+
+    <div *ngFor="let carta of cartasSeleccionadas">
+
+        <div class="cartaSeleccionada">
+            <figure>
+                <img src="{{carta.imagen}}" alt="{{carta.nombre}}">
+            </figure>
+
+            <div class="texto">
+                <h2>{{carta.nombre}}</h2>
+                <p>{{carta.cualidades}}</p>
+            </div>
+        </div>
+
+    </div>
+
 </div>
