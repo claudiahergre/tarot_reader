@@ -46,7 +46,6 @@ img {
 }
 
 .carta .front {
-
     transform: perspective(500px) rotateY(180deg);
 }
 
@@ -65,10 +64,19 @@ img {
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
-    /* ******* cambiar a 20px? ******* */
+
 }
 
-.carta .front figure {
+.carta .front .texto {
+    width: 600px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px 20px 20px 20px;
+}
+
+.carta .front .texto figure {
     width: 200px;
     height: 325px;
     overflow: hidden;
@@ -76,18 +84,11 @@ img {
     border-radius: 20px;
 }
 
-.carta .front img {
+.carta .front .texto figure img {
     width: 210px;
     height: auto;
 }
 
-.carta .front .texto {
-    width: 350px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0px 20px 20px 20px;
-}
 
 .carta .front .texto h2 {
     text-align: center;
