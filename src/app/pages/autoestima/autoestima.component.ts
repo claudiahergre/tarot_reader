@@ -11,9 +11,11 @@ export class AutoestimaComponent {
   private cartasService = inject(CartasService)
 
   cartas: Carta[];
+  cartaSeleccionada: Carta | null
 
   constructor() {
     this.cartas = [];
+    this.cartaSeleccionada = null
   }
 
   async ngOnInit() {
@@ -29,4 +31,9 @@ export class AutoestimaComponent {
       [array_de_cartas[i], array_de_cartas[j]] = [array_de_cartas[j], array_de_cartas[i]];
     }
   }
+
+  mostrarDetalles(carta: Carta) {
+    this.cartaSeleccionada = carta;
+  }
+
 }

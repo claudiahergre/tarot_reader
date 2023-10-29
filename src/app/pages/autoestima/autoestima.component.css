@@ -162,3 +162,35 @@ img {
     position: absolute;
     left: 84%;
 }
+
+
+
+.cartaSeleccionada {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 450px;
+
+}
+
+.cartaSeleccionada figure {
+    width: 200px;
+    overflow: hidden;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.cartaSeleccionada img {
+    width: 210px;
+    height: auto;
+}
+
+.cartaSeleccionada .texto {
+    width: 400px;
+    background-color: white;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+}
