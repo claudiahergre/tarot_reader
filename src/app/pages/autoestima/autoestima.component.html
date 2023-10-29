@@ -5,17 +5,21 @@
     </div>
 </div>
 
-<div class="container" *ngIf="cartaSeleccionada">
+<div class="container" *ngIf="cartasSeleccionadas">
 
-    <div class="cartaSeleccionada">
-        <figure>
-            <img src="{{cartaSeleccionada.imagen}}" alt="{{cartaSeleccionada.nombre}}">
-        </figure>
+    <div *ngFor="let carta of cartasSeleccionadas">
 
-        <div class="texto">
-            <h2>{{cartaSeleccionada.nombre}}</h2>
-            <p>{{cartaSeleccionada.cualidades}}</p>
+        <div class="cartaSeleccionada">
+            <figure>
+                <img src="{{carta.imagen}}" alt="{{carta.nombre}}">
+            </figure>
+
+            <div class="texto">
+                <h2>{{carta.nombre}}</h2>
+                <p>{{carta.cualidades}}</p>
+            </div>
         </div>
+
     </div>
 
 </div>

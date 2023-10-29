@@ -11,11 +11,13 @@ export class AutoestimaComponent {
   private cartasService = inject(CartasService)
 
   cartas: Carta[];
-  cartaSeleccionada: Carta | null
+  cartasSeleccionadas: Carta[];
+  maximoCartasSeleccionadas: number
 
   constructor() {
     this.cartas = [];
-    this.cartaSeleccionada = null
+    this.cartasSeleccionadas = []
+    this.maximoCartasSeleccionadas = 3;
   }
 
   async ngOnInit() {
@@ -33,7 +35,9 @@ export class AutoestimaComponent {
   }
 
   mostrarDetalles(carta: Carta) {
-    this.cartaSeleccionada = carta;
+    if (!this.cartasSeleccionadas.includes(carta) && this.cartasSeleccionadas.length < this.maximoCartasSeleccionadas) {
+      this.cartasSeleccionadas.push(carta)
+    }
   }
 
 }
