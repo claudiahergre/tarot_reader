@@ -177,6 +177,7 @@ img {
 
 .cartaSeleccionada figure {
     width: 200px;
+    height: 325px;
     overflow: hidden;
     border: 3px solid black;
     border-radius: 20px;
@@ -190,9 +191,11 @@ img {
 .cartaSeleccionada .texto {
     width: 350px;
     background-color: white;
-    padding-top: 15px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    padding-left: 40px;
+    border-radius: 10px;
+    padding: 20px;
     margin: 0px 20px 20px 20px;
+}
+
+.cartaSeleccionada .texto h2 {
+    text-align: center;
 }
