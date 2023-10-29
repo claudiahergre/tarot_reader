@@ -14,9 +14,13 @@ export class ConsejoComponent {
   private cartasService = inject(CartasService)
 
   cartas: Carta[];
+  cartasSeleccionadas: Carta[];
+  maximoCartasSeleccionadas: number
 
   constructor() {
     this.cartas = [];
+    this.cartasSeleccionadas = []
+    this.maximoCartasSeleccionadas = 3;
   }
 
   async ngOnInit() {
@@ -30,6 +34,18 @@ export class ConsejoComponent {
     for (let i = array_de_cartas.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array_de_cartas[i], array_de_cartas[j]] = [array_de_cartas[j], array_de_cartas[i]];
+    }
+  }
+
+  flipCard(event: any, carta: Carta) {
+    const target = event.currentTarget;
+    target.classList.toggle('is-flipped');
+    this.mostrarDetalles(carta)
+  }
+
+  mostrarDetalles(carta: Carta) {
+    if (!this.cartasSeleccionadas.includes(carta) && this.cartasSeleccionadas.length < this.maximoCartasSeleccionadas) {
+      this.cartasSeleccionadas.push(carta)
     }
   }
 
