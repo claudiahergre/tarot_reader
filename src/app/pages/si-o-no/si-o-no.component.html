@@ -1,1 +1,25 @@
-<p>si-o-no works!</p>
+<div class="container">
+    <div class="cartas">
+        <div class="carta" *ngFor="let carta of cartas" (click)="mostrarDetalles(carta)">
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="cartasSeleccionadas">
+
+    <div *ngFor="let carta of cartasSeleccionadas">
+
+        <div class="cartaSeleccionada">
+            <figure>
+                <img src="{{carta.imagen}}" alt="{{carta.nombre}}">
+            </figure>
+
+            <div class="texto">
+                <h2>{{carta.nombre}}</h2>
+                <p>La respuesta a tu pregunta es: {{carta.si_o_no}}</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
