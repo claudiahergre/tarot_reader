@@ -61,9 +61,19 @@ export class AutoestimaComponent {
 
       this.cartaTransform[i] = `translateY(450px) rotateY(360deg)`
       setTimeout(() => {
+
         this.cartasSeleccionadas.push(carta);
+
         const posicion = this.cartasSeleccionadas.length;
+
         $event.target.classList.add(`posicion-${posicion}`)
+
+        const cartaSeleccionada = document.querySelector('.cartaSeleccionada');
+        if (cartaSeleccionada) {
+          cartaSeleccionada.classList.add(`cartaMostrada-${posicion}`);
+        }
+
+
       }, 600);
 
     }

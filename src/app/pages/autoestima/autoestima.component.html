@@ -8,11 +8,11 @@
     </div>
 </div>
 
-<div class="container" *ngIf="cartasSeleccionadas">
+<div class="container2" *ngIf="cartasSeleccionadas">
 
-    <div *ngFor="let carta of cartasSeleccionadas">
+    <div *ngFor="let carta of cartasSeleccionadas; let i=index">
 
-        <div class="cartaSeleccionada">
+        <div class="cartaSeleccionada" [ngClass]="'cartaMostrada-' + (i + 1)">
             <figure>
                 <img src="{{carta.imagen}}" alt="{{carta.nombre}}">
             </figure>

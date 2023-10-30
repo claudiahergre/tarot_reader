@@ -163,11 +163,16 @@ img {
     left: 84%;
 }
 
+.container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
 
 
 .cartaSeleccionada {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     flex-direction: column;
     margin-top: 450px;
@@ -200,16 +205,31 @@ img {
     text-align: center;
 }
 
+
+/* cartas seleccionadas, dorso */
+
 .carta.posicion-1 {
     left: 157px;
-    transform: (450px) rotateY(360deg);
 }
 
 .carta.posicion-2 {
     left: 546px;
-    transform: (450px) rotateY(360deg);
 }
 
 .carta.posicion-3 {
+    left: 940px;
+}
+
+/* cartas seleccionadas, cara */
+
+.cartaSeleccionada.cartaMostrada-1 {
+    left: 157px;
+}
+
+.cartaSeleccionada.cartaMostrada-2 {
+    left: 546px;
+}
+
+.cartaSeleccionada.cartaMostrada-3 {
     left: 940px;
 }
