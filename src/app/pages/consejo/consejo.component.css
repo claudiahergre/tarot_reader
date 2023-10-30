@@ -46,9 +46,13 @@ img {
 }
 
 .carta .front {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
     transform: perspective(500px) rotateY(180deg);
 }
-
 
 .carta.is-flipped .front {
     transform: translateY(450px) translateX(-50%) perspective(500px) rotateY(360deg);
@@ -56,15 +60,6 @@ img {
 
 .carta.is-flipped .back {
     transform: translateY(450px) translateX(-50%) perspective(500px) rotateY(180deg);
-}
-
-.carta .front {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-
 }
 
 .carta .front .texto {

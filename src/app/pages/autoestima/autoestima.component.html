@@ -1,6 +1,10 @@
 <div class="container">
     <div class="cartas">
-        <div class="carta" *ngFor="let carta of cartas" (click)="mostrarDetalles(carta)">
+        <div class="carta" *ngFor="let carta of cartas; let i = index;" (click)="mostrarDetalles($event,i, carta)"
+            [ngStyle]="{
+            transform: cartaTransform[i],
+            margin: cartaMargin[i],
+        }">
         </div>
     </div>
 </div>

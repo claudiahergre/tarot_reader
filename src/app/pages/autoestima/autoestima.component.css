@@ -199,3 +199,15 @@ img {
 .cartaSeleccionada .texto h2 {
     text-align: center;
 }
+
+.carta .posicion-1 {
+    left: 10px;
+}
+
+.carta .posicion-2 {
+    left: 200px;
+}
+
+.carta.posicion-3 {
+    left: 400px;
+}
