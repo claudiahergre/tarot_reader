@@ -200,14 +200,16 @@ img {
     text-align: center;
 }
 
-.carta .posicion-1 {
-    left: 10px;
+.carta.posicion-1 {
+    left: 157px;
+    transform: (450px) rotateY(360deg);
 }
 
-.carta .posicion-2 {
-    left: 200px;
+.carta.posicion-2 {
+    left: 546px;
+    transform: (450px) rotateY(360deg);
 }
 
 .carta.posicion-3 {
-    left: 400px;
+    left: 940px;
 }

@@ -66,7 +66,6 @@ export class AutoestimaComponent {
         $event.target.classList.add(`posicion-${posicion}`)
       }, 600);
 
-      // this.cartaMargin[i] = `${margen}px`
     }
   }
 
