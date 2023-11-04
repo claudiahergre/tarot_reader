@@ -1,15 +1,19 @@
 <div class="container">
     <div class="cartas">
-        <div class="carta" *ngFor="let carta of cartas" (click)="mostrarDetalles(carta)">
+        <div class="carta" *ngFor="let carta of cartas; let i = index;" (click)="mostrarDetalles($event,i, carta)"
+            [ngStyle]="{
+            transform: cartaTransform[i], cartaDorsoStyles
+        }">
         </div>
     </div>
 </div>
 
-<div class="container" *ngIf="cartasSeleccionadas">
+<div class="container2" *ngIf="cartasSeleccionadas">
 
-    <div *ngFor="let carta of cartasSeleccionadas">
+    <div *ngFor="let carta of cartasSeleccionadas; let i=index">
 
-        <div class="cartaSeleccionada">
+        <div class="cartaSeleccionada" [ngClass]="'cartaMostrada-' + (i + 1)" (mouseenter)="onMouseEnter($event)"
+            [ngStyle]="cartaVistaStyles">
             <figure>
                 <img src="{{carta.imagen}}" alt="{{carta.nombre}}">
             </figure>

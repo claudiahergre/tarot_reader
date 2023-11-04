@@ -29,6 +29,12 @@ img {
     transform: translateY(-83px);
 }
 
+/* .carta:nth-child(n) {
+    z-index: n;
+    position: absolute;
+    left: calc(4% * (n - 1));
+} */
+
 .carta:nth-child(1) {
     z-index: 1;
     position: absolute;
@@ -163,17 +169,22 @@ img {
     left: 84%;
 }
 
+.container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
 
 
 .cartaSeleccionada {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin-top: 450px;
-    /* ******* cambiar a 20px? ******* */
-
+    opacity: 0;
+    transition: 0.6s;
 }
+
 
 .cartaSeleccionada figure {
     width: 200px;
@@ -199,3 +210,39 @@ img {
 .cartaSeleccionada .texto h2 {
     text-align: center;
 }
+
+
+/* cartas seleccionadas, dorso */
+
+.carta.posicion-1 {
+    left: 157px;
+}
+
+.carta.posicion-2 {
+    left: 546px;
+}
+
+.carta.posicion-3 {
+    left: 936px;
+}
+
+
+.carta.posicion-1:hover,
+.carta.posicion-2:hover,
+.carta.posicion-3:hover {
+    opacity: 0;
+}
+
+
+/* cartas seleccionadas, cara */
+
+.cartaSeleccionada.cartaMostrada-1 {
+    margin-left: 180px;
+}
+
+
+/* .cartaSeleccionada.cartaMostrada-1:hover,
+.cartaSeleccionada.cartaMostrada-2:hover,
+.cartaSeleccionada.cartaMostrada-3:hover {
+    opacity: 1;
+} */

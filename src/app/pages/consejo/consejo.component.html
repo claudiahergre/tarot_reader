@@ -1,8 +1,20 @@
 <div class="container">
     <div class="cartas">
-        <div class="carta" *ngFor="let carta of cartas">
-            <div class="front"></div>
-            <div class="back"></div>
+        <div class="carta" *ngFor="let carta of cartas" (click)="flipCard($event, carta)">
+            <!-- <div class="back"></div> -->
+
+            <div class="front">
+
+                <div class="texto">
+                    <figure>
+                        <img src="{{carta.imagen}}" alt="{{carta.nombre}}">
+                    </figure>
+                    <h2>{{carta.nombre}}</h2>
+                    <p>{{carta.interpretacion_positiva}}</p>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>

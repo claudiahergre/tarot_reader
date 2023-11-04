@@ -39,28 +39,55 @@ img {
     transition: 2s;
 }
 
-.carta .front {
+.carta .back {
     background-image: url(https://img.freepik.com/vector-gratis/fondo-pantalla-mistico-dibujado-mano_23-2149459343.jpg?w=360&t=st=1694264117~exp=1694264717~hmac=707048db6cd45ed26f54c696169d1eaf9a975464956853cee7f92f105283cb72);
     background-size: cover;
     transform: perspective(500px) rotateY(0deg);
 }
 
-.carta:hover .front {
-    transform: translateY(450px) translateX(-50%) perspective(500px) rotateY(180deg);
-}
-
-.carta .back {
-    background-image: url(https://img.freepik.com/premium-vector/page-pentacles-tarot-card-minor-arcana-with-black-gold-white-hand-drawn-vector-doodle_351449-95.jpg);
-    background-size: cover;
+.carta .front {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
     transform: perspective(500px) rotateY(180deg);
 }
 
-.carta:hover .back {
-
+.carta.is-flipped .front {
     transform: translateY(450px) translateX(-50%) perspective(500px) rotateY(360deg);
 }
 
+.carta.is-flipped .back {
+    transform: translateY(450px) translateX(-50%) perspective(500px) rotateY(180deg);
+}
 
+.carta .front .texto {
+    width: 600px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px 20px 20px 20px;
+}
+
+.carta .front .texto figure {
+    width: 200px;
+    height: 325px;
+    overflow: hidden;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.carta .front .texto figure img {
+    width: 210px;
+    height: auto;
+}
+
+
+.carta .front .texto h2 {
+    text-align: center;
+}
 
 
 .carta:nth-child(1) {
