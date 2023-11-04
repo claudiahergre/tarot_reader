@@ -217,19 +217,19 @@ img {
 }
 
 .carta.posicion-3 {
-    left: 940px;
+    left: 936px;
 }
 
 /* cartas seleccionadas, cara */
 
 .cartaSeleccionada.cartaMostrada-1 {
-    left: 157px;
+    margin-left: 180px;
 }
 
-.cartaSeleccionada.cartaMostrada-2 {
+/* .cartaSeleccionada.cartaMostrada-2 {
     left: 546px;
 }
 
 .cartaSeleccionada.cartaMostrada-3 {
     left: 940px;
-}
+} */
