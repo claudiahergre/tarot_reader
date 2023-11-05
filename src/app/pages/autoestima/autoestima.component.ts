@@ -12,10 +12,10 @@ export class AutoestimaComponent {
 
   cartas: Carta[];
   cartasSeleccionadas: Carta[];
-  maximoCartasSeleccionadas: number
+  maximoCartasSeleccionadas: number;
   cartaTransform: string[];
   cartaMargin: string[];
-  cartaVistaStyles: any
+  cartaVistaStyles: any;
   cartaDorsoStyles: any
 
   constructor() {
@@ -25,7 +25,7 @@ export class AutoestimaComponent {
     this.cartaTransform = [];
     this.cartaMargin = [];
     this.cartaVistaStyles = [];
-    this.cartaDorsoStyles = []
+    this.cartaDorsoStyles = [];
   }
 
   async ngOnInit() {
@@ -62,32 +62,21 @@ export class AutoestimaComponent {
         }
       }, 600);
 
-      this.cartaDorsoStyles.opacity = 0
+      const cartasEnPosicion = document.querySelector('.carta.posicion-3');
+      if (cartasEnPosicion) {
+
+        cartasEnPosicion.addEventListener('mouseenter', ($event) => {
+
+        });
+
+      }
 
     }
   }
 
   onMouseEnter(event: MouseEvent) {
     this.cartaVistaStyles.opacity = 1;
-    this.cartaDorsoStyles.opacity = 0
+
   }
 
 }
-
-// this.cartas.length
-
-/*  const rect = $event.target.getBoundingClientRect()
- let translateX = rect.x - 250;
- if (this.cartasSeleccionadas.length === 1) {
-   translateX = 0;
- } else if (this.cartasSeleccionadas.length === 2) {
-   translateX = rect.x + 250;
- } */
-
-/*  let margen = 0;
- if (this.cartasSeleccionadas.length === 1) {
-   margen = 50;
- } else if (this.cartasSeleccionadas.length === 2) {
-   margen = 100;
- }
- console.log(margen); */

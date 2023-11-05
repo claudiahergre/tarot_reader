@@ -2,7 +2,8 @@
     <div class="cartas">
         <div class="carta" *ngFor="let carta of cartas; let i = index;" (click)="mostrarDetalles($event,i, carta)"
             [ngStyle]="{
-            transform: cartaTransform[i], cartaDorsoStyles
+            transform: cartaTransform[i], 
+            
         }">
         </div>
     </div>
