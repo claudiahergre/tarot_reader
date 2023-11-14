@@ -14,18 +14,14 @@ export class AutoestimaComponent {
   cartasSeleccionadas: Carta[];
   maximoCartasSeleccionadas: number;
   cartaTransform: string[];
-  cartaMargin: string[];
   cartaVistaStyles: any;
-  cartaDorsoStyles: any
 
   constructor() {
     this.cartas = [];
     this.cartasSeleccionadas = [];
     this.maximoCartasSeleccionadas = 3;
     this.cartaTransform = [];
-    this.cartaMargin = [];
     this.cartaVistaStyles = [];
-    this.cartaDorsoStyles = [];
   }
 
   async ngOnInit() {
@@ -36,6 +32,7 @@ export class AutoestimaComponent {
   }
 
   // reordenar aleatoriamente el array de cartas
+
   private barajar(array_de_cartas: any[]) {
     for (let i = array_de_cartas.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -43,9 +40,11 @@ export class AutoestimaComponent {
     }
   }
 
+
+  // seleccionar cartas
+
   mostrarDetalles($event: any, i: number, carta: Carta) {
     if (!this.cartasSeleccionadas.includes(carta) && this.cartasSeleccionadas.length < this.maximoCartasSeleccionadas) {
-
 
       this.cartaTransform[i] = `translateY(450px) rotateY(360deg)`
 
@@ -62,31 +61,14 @@ export class AutoestimaComponent {
         }
       }, 600);
 
-      /*  const cartasEnPosicion = document.querySelector('.carta.posicion-3');
-       if (cartasEnPosicion) {
-         const cartasEnPosicionElements = document.querySelectorAll('.carta');
- 
- 
-         // pero el cartaDorsoStyles, ¿cómo se lo agrego a .carta.posición?
-         // este mouseenter se aplicaría solo a .carta.posicion-3, no? porque si es así, esta idea tampoco me sirve
- 
- 
-         cartasEnPosicionElements.forEach((element) => {
-           element.addEventListener('mouseenter', () => {
-             //element.classList.add('active');
-             this.cartaDorsoStyles.opacity = 0;
-           });
-         });
- 
- 
-       } */
-
     }
   }
 
+
+  // ocultacion dorsos - revelación caras
+
   onMouseEnter(event: MouseEvent) {
     this.cartaVistaStyles.opacity = 1;
-
   }
 
   onMouseEnterDorso(event: any, pos: number) {
@@ -101,5 +83,4 @@ export class AutoestimaComponent {
       cartaSeleccionada.style.opacity = '1';
     }
   }
-
 }

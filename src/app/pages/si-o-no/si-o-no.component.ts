@@ -12,17 +12,22 @@ export class SiONoComponent {
 
   cartas: Carta[];
   cartasSeleccionadas: Carta[];
-  maximoCartasSeleccionadas: number
+  maximoCartasSeleccionadas: number;
+  cartaTransform: string[];
+  cartaVistaStyles: any;
 
   constructor() {
     this.cartas = [];
     this.cartasSeleccionadas = []
     this.maximoCartasSeleccionadas = 1;
+    this.cartaTransform = [];
+    this.cartaVistaStyles = [];
   }
 
   async ngOnInit() {
     this.cartas = await this.cartasService.getAll();
     this.barajar(this.cartas);
+    this.cartaTransform = this.cartas.map(carta => '');
     console.log(this.cartas)
   }
 
@@ -34,9 +39,46 @@ export class SiONoComponent {
     }
   }
 
-  mostrarDetalles(carta: Carta) {
+  // seleccionar cartas
+
+  mostrarDetalles($event: any, i: number, carta: Carta) {
     if (!this.cartasSeleccionadas.includes(carta) && this.cartasSeleccionadas.length < this.maximoCartasSeleccionadas) {
-      this.cartasSeleccionadas.push(carta)
+
+      this.cartaTransform[i] = `translateY(450px) rotateY(360deg)`
+
+      setTimeout(() => {
+
+        this.cartasSeleccionadas.push(carta);
+
+        const posicion = this.cartasSeleccionadas.length;
+        $event.target.classList.add(`posicion-${posicion}`);
+
+        const cartaSeleccionada = document.querySelector('.cartaSeleccionada');
+        if (cartaSeleccionada) {
+          cartaSeleccionada.classList.add(`cartaMostrada-${posicion}`);
+        }
+      }, 600);
+
+    }
+  }
+
+
+  // ocultacion dorsos - revelación caras
+
+  onMouseEnter(event: MouseEvent) {
+    this.cartaVistaStyles.opacity = 1;
+  }
+
+  onMouseEnterDorso(event: any, pos: number) {
+    const target = event.target;
+    if (target && (target.classList.contains('posicion-1'))) {
+      event.target.style.opacity = 0;
+      console.log(`.cartaSeleccionada.cartaMostrada-${pos}`);
+
+      const cartaSeleccionada = document.querySelector(`.cartaSeleccionada.cartaMostrada-${pos}`)! as HTMLElement;
+      console.log(cartaSeleccionada);
+
+      cartaSeleccionada.style.opacity = '1';
     }
   }
 }
