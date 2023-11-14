@@ -1,10 +1,40 @@
+.cabecera {
+    width: 100%;
+    height: 100px;
+    margin-top: 2%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.cabecera h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 4rem;
+    margin-left: 17%;
+}
+
+.descripcion {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.descripcion p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 15%;
+}
+
 .container {
     display: flex;
     justify-content: center;
 }
 
 .cartas {
-    margin-top: 20%;
+    margin-top: 2%;
     display: flex;
     width: 100%;
     height: 100%;

@@ -1,3 +1,11 @@
+<section class="cabecera">
+    <h2>Tirada de Sí o No</h2>
+</section>
+<section class="descripcion">
+    <p>¿Tienes una pregunta concreta? <br> Concéntrate en ella, elige una carta y obtén tu respuesta...</p>
+</section>
+
+
 <div class="container">
     <div class="cartas">
         <div class="carta" *ngFor="let carta of cartas; let i = index;" (click)="mostrarDetalles($event, i, carta)"
