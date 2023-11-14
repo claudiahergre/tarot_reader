@@ -1,17 +1,29 @@
+<section class="cabecera">
+    <h2>Tirada de Sí o No</h2>
+</section>
+<section class="descripcion">
+    <p>¿Tienes una pregunta concreta? <br> Concéntrate en ella, elige una carta y obtén tu respuesta...</p>
+</section>
+
+
 <div class="container">
     <div class="cartas">
-        <div class="carta" *ngFor="let carta of cartas" (click)="mostrarDetalles(carta)">
+        <div class="carta" *ngFor="let carta of cartas; let i = index;" (click)="mostrarDetalles($event, i, carta)"
+            [ngStyle]="{
+            transform: cartaTransform[i]
+        }" (mouseenter)="onMouseEnterDorso($event, cartasSeleccionadas.length)">
         </div>
     </div>
 </div>
 
-<div class="container" *ngIf="cartasSeleccionadas">
+<div class="container2" *ngIf="cartasSeleccionadas">
 
-    <div *ngFor="let carta of cartasSeleccionadas">
+    <div *ngFor="let carta of cartasSeleccionadas; let i=index">
 
-        <div class="cartaSeleccionada">
+        <div class=" cartaSeleccionada" [ngClass]="'cartaMostrada-' + (i + 1)" (mouseenter)="onMouseEnter($event)"
+            [ngStyle]="cartaVistaStyles">
             <figure>
-                <img src="{{carta.imagen}}" alt="{{carta.nombre}}">
+                <img [src]="carta.imagen" [alt]="carta.nombre">
             </figure>
 
             <div class="texto">
