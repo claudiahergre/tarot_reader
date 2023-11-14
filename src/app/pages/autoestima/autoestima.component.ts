@@ -62,14 +62,24 @@ export class AutoestimaComponent {
         }
       }, 600);
 
-      const cartasEnPosicion = document.querySelector('.carta.posicion-3');
-      if (cartasEnPosicion) {
-
-        cartasEnPosicion.addEventListener('mouseenter', ($event) => {
-
-        });
-
-      }
+      /*  const cartasEnPosicion = document.querySelector('.carta.posicion-3');
+       if (cartasEnPosicion) {
+         const cartasEnPosicionElements = document.querySelectorAll('.carta');
+ 
+ 
+         // pero el cartaDorsoStyles, ¿cómo se lo agrego a .carta.posición?
+         // este mouseenter se aplicaría solo a .carta.posicion-3, no? porque si es así, esta idea tampoco me sirve
+ 
+ 
+         cartasEnPosicionElements.forEach((element) => {
+           element.addEventListener('mouseenter', () => {
+             //element.classList.add('active');
+             this.cartaDorsoStyles.opacity = 0;
+           });
+         });
+ 
+ 
+       } */
 
     }
   }
@@ -77,6 +87,19 @@ export class AutoestimaComponent {
   onMouseEnter(event: MouseEvent) {
     this.cartaVistaStyles.opacity = 1;
 
+  }
+
+  onMouseEnterDorso(event: any, pos: number) {
+    const target = event.target;
+    if (target && (target.classList.contains('posicion-1') || target.classList.contains('posicion-2') || target.classList.contains('posicion-3'))) {
+      event.target.style.opacity = 0;
+      console.log(`.cartaSeleccionada.cartaMostrada-${pos}`);
+
+      const cartaSeleccionada = document.querySelector(`.cartaSeleccionada.cartaMostrada-${pos}`)! as HTMLElement;
+      console.log(cartaSeleccionada);
+
+      cartaSeleccionada.style.opacity = '1';
+    }
   }
 
 }

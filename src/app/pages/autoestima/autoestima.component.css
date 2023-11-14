@@ -227,11 +227,17 @@ img {
 }
 
 
-.carta.posicion-1:hover,
+/* .carta.posicion-1:hover,
 .carta.posicion-2:hover,
 .carta.posicion-3:hover {
     opacity: 0;
-}
+} */
+
+/* .carta.posicion-1.active,
+.carta.posicion-2.active,
+.carta.posicion-3.active {
+    opacity: 0;
+} */
 
 
 /* cartas seleccionadas, cara */
