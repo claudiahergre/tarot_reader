@@ -246,6 +246,7 @@ img {
 .cartaSeleccionada .texto p {
     text-align: justify;
     font-family: var(--fuentetexto);
+    font-size: var(--tamañotexto);
 }
 
 

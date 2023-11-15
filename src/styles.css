@@ -1,6 +1,7 @@
 @import 'animate.css';
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dosis:wght@400;600&display=swap');
 
+
 body {
     background-image: url(https://img.freepik.com/foto-gratis/primer-plano-humo-oscuro_23-2147734885.jpg?w=740&t=st=1699986408~exp=1699987008~hmac=b68eea86ed251e37e7865815f0000f477c3b4acc7c64efbfa3df8453b5f84772);
     background-size: cover;
@@ -20,4 +21,7 @@ body {
 
     --fuentetitulos: 'Abril Fatface', serif;
     --fuentetexto: 'Dosis', sans-serif;
+
+    --tamañotexto: 1.3rem;
+
 }

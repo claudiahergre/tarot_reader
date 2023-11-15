@@ -1,24 +1,34 @@
 <header>
   <nav>
+
     <div class="dropdown">
       <button class="btn btn-secondary" type="button">
         Tiradas
       </button>
+
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" routerLink="/consejo">Consejo del día</a></li>
         <li><a class="dropdown-item" routerLink="/si_o_no">Sí o no</a></li>
         <li><a class="dropdown-item" routerLink="/autoestima">Cualidades</a></li>
       </ul>
     </div>
-    <div class="logo">
+
+
+    <div class="logo" routerLink="/home">
       <h1>TarotReader</h1>
     </div>
+
   </nav>
 </header>
 
 <main>
   <router-outlet></router-outlet>
+  <button mat-fab color="primary" class="scroll-to-top-button" (click)="scrollToTop()">
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </button>
 </main>
+
+
 
 <footer>
 
