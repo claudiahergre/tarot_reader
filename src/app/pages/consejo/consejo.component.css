@@ -1,10 +1,41 @@
+.cabecera {
+    width: 100%;
+    height: 100px;
+    margin-top: 2%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.cabecera h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 4rem;
+    margin-left: 18.5%;
+}
+
+.descripcion {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.descripcion p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 15%;
+    text-align: center;
+}
+
 .container {
     display: flex;
     justify-content: center;
 }
 
 .cartas {
-    margin-top: 20%;
+    margin-top: 2%;
     display: flex;
     width: 100%;
     height: 100%;
@@ -29,66 +60,11 @@ img {
     transform: translateY(-83px);
 }
 
-.carta div {
+/* .carta:nth-child(n) {
+    z-index: n;
     position: absolute;
-    max-width: 100%;
-    width: 200px;
-    height: 360px;
-    border-radius: 20px;
-    backface-visibility: hidden;
-    transition: 2s;
-}
-
-.carta .back {
-    background-image: url(https://img.freepik.com/vector-gratis/fondo-pantalla-mistico-dibujado-mano_23-2149459343.jpg?w=360&t=st=1694264117~exp=1694264717~hmac=707048db6cd45ed26f54c696169d1eaf9a975464956853cee7f92f105283cb72);
-    background-size: cover;
-    transform: perspective(500px) rotateY(0deg);
-}
-
-.carta .front {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-    transform: perspective(500px) rotateY(180deg);
-}
-
-.carta.is-flipped .front {
-    transform: translateY(450px) translateX(-50%) perspective(500px) rotateY(360deg);
-}
-
-.carta.is-flipped .back {
-    transform: translateY(450px) translateX(-50%) perspective(500px) rotateY(180deg);
-}
-
-.carta .front .texto {
-    width: 600px;
-    height: auto;
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0px 20px 20px 20px;
-}
-
-.carta .front .texto figure {
-    width: 200px;
-    height: 325px;
-    overflow: hidden;
-    border: 3px solid black;
-    border-radius: 20px;
-}
-
-.carta .front .texto figure img {
-    width: 210px;
-    height: auto;
-}
-
-
-.carta .front .texto h2 {
-    text-align: center;
-}
-
+    left: calc(4% * (n - 1));
+} */
 
 .carta:nth-child(1) {
     z-index: 1;
@@ -222,4 +198,74 @@ img {
     z-index: 22;
     position: absolute;
     left: 84%;
+}
+
+.container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.cartaSeleccionada {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 450px;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+
+.cartaSeleccionada figure {
+    width: 200px;
+    height: 355px;
+    overflow: hidden;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.cartaSeleccionada img {
+    width: 210px;
+    height: 400px;
+}
+
+.cartaSeleccionada .texto {
+    width: 350px;
+    background-color: var(--colorrosa);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px 20px 20px 20px;
+}
+
+.cartaSeleccionada .texto h2 {
+    text-align: center;
+    font-family: var(--fuentetitulos);
+}
+
+.cartaSeleccionada .texto p {
+    text-align: justify;
+    font-family: var(--fuentetexto);
+}
+
+
+/* cartas seleccionadas, dorso */
+
+.carta.posicion-1 {
+    left: 157px;
+}
+
+.carta.posicion-2 {
+    left: 546px;
+}
+
+.carta.posicion-3 {
+    left: 936px;
+}
+
+
+/* cartas seleccionadas, cara */
+
+.cartaSeleccionada.cartaMostrada-1 {
+    margin-left: 180px;
 }

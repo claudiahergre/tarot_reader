@@ -1,20 +1,37 @@
+<section class="cabecera">
+    <h2>Consejo del día</h2>
+</section>
+<section class="descripcion">
+    <p>¿Necesitas una guía para el día de hoy?<br>Selecciona TRES cartas para recibir tres valiosos consejos</p>
+</section>
+
 <div class="container">
     <div class="cartas">
-        <div class="carta" *ngFor="let carta of cartas" (click)="flipCard($event, carta)">
-            <!-- <div class="back"></div> -->
-
-            <div class="front">
-
-                <div class="texto">
-                    <figure>
-                        <img src="{{carta.imagen}}" alt="{{carta.nombre}}">
-                    </figure>
-                    <h2>{{carta.nombre}}</h2>
-                    <p>{{carta.interpretacion_positiva}}</p>
-                </div>
-
-            </div>
-
+        <div class="carta" *ngFor="let carta of cartas; let i = index;" (click)="mostrarDetalles($event,i, carta)"
+            [ngStyle]="{
+            transform: cartaTransform[i]
+        }" (mouseenter)="onMouseEnterDorso($event, cartasSeleccionadas.length)">
         </div>
     </div>
+</div>
+
+<div class="container2" *ngIf="cartasSeleccionadas">
+
+    <div *ngFor="let carta of cartasSeleccionadas; let i=index">
+
+        <div class="cartaSeleccionada" [ngClass]="'cartaMostrada-' + (i + 1)" (mouseenter)="onMouseEnter($event)"
+            [ngStyle]="cartaVistaStyles">
+            <figure>
+                <img [src]="carta.imagen" [alt]="carta.nombre">
+            </figure>
+
+            <div class="texto">
+                <h2>{{carta.nombre}}</h2>
+                <p>{{carta.interpretacion_positiva}}</p>
+                <p>{{carta.interpretacion_negativa}}</p>
+            </div>
+        </div>
+
+    </div>
+
 </div>
