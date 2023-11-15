@@ -1,10 +1,41 @@
+.cabecera {
+    width: 100%;
+    height: 100px;
+    margin-top: 2%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.cabecera h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 4rem;
+    margin-left: 15%;
+}
+
+.descripcion {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.descripcion p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 15%;
+    text-align: center;
+}
+
 .container {
     display: flex;
     justify-content: center;
 }
 
 .cartas {
-    margin-top: 20%;
+    margin-top: 2%;
     display: flex;
     width: 100%;
     height: 100%;
@@ -201,7 +232,7 @@ img {
 
 .cartaSeleccionada .texto {
     width: 350px;
-    background-color: white;
+    background-color: var(--colorrosa);
     border-radius: 10px;
     padding: 20px;
     margin: 0px 20px 20px 20px;
@@ -209,6 +240,12 @@ img {
 
 .cartaSeleccionada .texto h2 {
     text-align: center;
+    font-family: var(--fuentetitulos);
+}
+
+.cartaSeleccionada .texto p {
+    text-align: center;
+    font-family: var(--fuentetexto);
 }
 
 
@@ -225,19 +262,6 @@ img {
 .carta.posicion-3 {
     left: 936px;
 }
-
-
-/* .carta.posicion-1:hover,
-.carta.posicion-2:hover,
-.carta.posicion-3:hover {
-    opacity: 0;
-} */
-
-/* .carta.posicion-1.active,
-.carta.posicion-2.active,
-.carta.posicion-3.active {
-    opacity: 0;
-} */
 
 
 /* cartas seleccionadas, cara */
