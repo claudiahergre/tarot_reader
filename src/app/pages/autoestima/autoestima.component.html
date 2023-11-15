@@ -1,3 +1,11 @@
+<section class="cabecera">
+    <h2>Tirada de Cualidades</h2>
+</section>
+<section class="descripcion">
+    <p>A veces necesitamos que nos recuerden nuestros puntos fuertes.<br>Elige TRES cartas para saber en qué destacas,
+        según el Tarot.</p>
+</section>
+
 <div class="container">
     <div class="cartas">
         <div class="carta" *ngFor="let carta of cartas; let i = index;" (click)="mostrarDetalles($event,i, carta)"
