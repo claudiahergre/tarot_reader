@@ -10,3 +10,10 @@ body {
 }
 
 /* https://img.freepik.com/premium-photo/pink-smoke-black-background-colorful-fog-abstract-swirl-vaping-seamless-pattern_379823-3113.jpg?w=826 */
+
+:root {
+    --colorrosa: #F8E0DE;
+    --colornegro: #002126;
+    --colorgrisoscuro: #2F4C50;
+    --colorgrisclaro: #5A7173;
+}
