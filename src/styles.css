@@ -20,4 +20,7 @@ body {
 
     --fuentetitulos: 'Abril Fatface', serif;
     --fuentetexto: 'Dosis', sans-serif;
+
+    --tamañotexto: 1.3rem;
+
 }

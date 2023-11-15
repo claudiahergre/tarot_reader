@@ -12,6 +12,7 @@ nav {
 
 .logo {
     margin-right: 5%;
+    cursor: pointer;
 }
 
 .dropdown {

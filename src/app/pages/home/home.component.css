@@ -203,7 +203,7 @@ img {
 
 .container2 {
     width: 80%;
-    margin: 35% auto;
+    margin: 25% auto 10px auto;
     background-color: rgba(248, 224, 222, 0.8);
     padding: 40px;
     border-radius: 20px;
@@ -237,4 +237,46 @@ img {
 
 span {
     font-weight: 700;
+}
+
+.cartera {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cartera .cartaEstatica {
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-pantalla-mistico-dibujado-mano_23-2149459343.jpg?w=360&t=st=1694264117~exp=1694264717~hmac=707048db6cd45ed26f54c696169d1eaf9a975464956853cee7f92f105283cb72);
+    background-size: cover;
+    max-width: 100%;
+    width: 200px;
+    height: 360px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.cartera .cartaEstatica .texto-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    text-align: center;
+    font-family: var(--fuentetexto);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.cartera .cartaEstatica:hover {
+    background-image: none;
+    background-color: #1F2314;
+    cursor: pointer;
+}
+
+.cartera .cartaEstatica:hover .texto-hover {
+    opacity: 1;
 }
