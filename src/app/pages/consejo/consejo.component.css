@@ -8,8 +8,9 @@
 }
 
 .cabecera h2 {
-    font-family: 'Abril Fatface', serif;
-    font-size: 4rem;
+    font-family: var(--fuentetitulos);
+    font-size: var(--tamañocabecera);
+    font-weight: var(--pesocabecera);
     margin-left: 18.5%;
 }
 
@@ -22,9 +23,9 @@
 }
 
 .descripcion p {
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: var(--fuentetexto);
+    font-size: var(--tamañodescripcion);
+    font-weight: var(--pesodescripcion);
     margin-left: 15%;
     text-align: center;
 }
@@ -241,12 +242,15 @@ img {
 .cartaSeleccionada .texto h2 {
     text-align: center;
     font-family: var(--fuentetitulos);
+    font-size: var(--tamañonombrecarta);
+    font-weight: var(--pesonombrecarta);
 }
 
 .cartaSeleccionada .texto p {
     text-align: justify;
     font-family: var(--fuentetexto);
-    font-size: var(--tamañotexto);
+    font-size: var(--tamañotextocarta);
+    font-size: var(--pesotextocarta);
 }
 
 

@@ -1,6 +1,8 @@
 @import 'animate.css';
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dosis:wght@400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=New+Tegomin&family=Praise&family=Smooch&family=Spectral+SC:wght@400;700&display=swap');
+
 
 body {
     background-image: url(https://img.freepik.com/foto-gratis/primer-plano-humo-oscuro_23-2147734885.jpg?w=740&t=st=1699986408~exp=1699987008~hmac=b68eea86ed251e37e7865815f0000f477c3b4acc7c64efbfa3df8453b5f84772);
@@ -19,9 +21,18 @@ body {
     --colorgrisoscuro: #2F4C50;
     --colorgrisclaro: #5A7173;
 
-    --fuentetitulos: 'Abril Fatface', serif;
-    --fuentetexto: 'Dosis', sans-serif;
+    --fuentetitulos: 'Spectral SC', serif;
+    --fuentetexto: 'Spectral SC', serif;
 
+    --tamañocabecera: 4rem;
+    --tamañodescripcion: 1.3rem;
+    --tamañonombrecarta: 1.5rem;
+    --tamañotextocarta: 1.2rem;
+    --tamañosubtitulos: 3rem;
     --tamañotexto: 1.3rem;
 
+    --pesocabecera: 600;
+    --pesodescripcion: 600;
+    --pesonombrecarta: 600;
+    --pesotextocarta: 400;
 }

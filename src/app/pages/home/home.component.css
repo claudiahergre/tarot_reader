@@ -3,29 +3,29 @@
     height: 100px;
     margin-top: 2%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
 .cabecera h2 {
-    font-family: 'Abril Fatface', serif;
-    font-size: 4rem;
-    margin-left: 15%;
+    font-family: var(--fuentetitulos);
+    font-size: var(--tamañocabecera);
+    font-weight: var(--pesocabecera);
+
 }
 
 .descripcion {
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
 .descripcion p {
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-left: 15%;
+    font-family: var(--fuentetexto);
+    font-size: var(--tamañodescripcion);
+    font-weight: var(--pesodescripcion);
     text-align: center;
 }
 
@@ -212,13 +212,14 @@ img {
 
 .container2 h2 {
     font-family: var(--fuentetitulos);
-    font-size: 3rem;
+    font-size: var(--tamañosubtitulos);
+    font-weight: var(--pesocabecera);
 }
 
 .container2 p {
     font-family: var(--fuentetexto);
-    color: var(--colorgrisoscuro);
-    font-size: 1.3rem;
+    font-size: var(--tamañotexto);
+    color: var(--colornegro);
 }
 
 .container2 section {
@@ -227,9 +228,9 @@ img {
 
 .container2 .llamada p {
     font-family: var(--fuentetexto);
-    color: var(--colornegro);
     font-size: 2rem;
     font-weight: 700;
+    color: var(--colornegro);
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
