@@ -28,7 +28,6 @@ export class AutoestimaComponent {
     this.cartas = await this.cartasService.getAll();
     this.barajar(this.cartas);
     this.cartaTransform = this.cartas.map(carta => '');
-    console.log(this.cartas)
   }
 
   // reordenar aleatoriamente el array de cartas
@@ -75,10 +74,8 @@ export class AutoestimaComponent {
     const target = event.target;
     if (target && (target.classList.contains('posicion-1') || target.classList.contains('posicion-2') || target.classList.contains('posicion-3'))) {
       event.target.style.opacity = 0;
-      console.log(`.cartaSeleccionada.cartaMostrada-${pos}`);
 
       const cartaSeleccionada = document.querySelector(`.cartaSeleccionada.cartaMostrada-${pos}`)! as HTMLElement;
-      console.log(cartaSeleccionada);
 
       cartaSeleccionada.style.opacity = '1';
     }
